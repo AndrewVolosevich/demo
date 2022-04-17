@@ -1,8 +1,13 @@
 import React from 'react';
 
-const Search = () => {
+const Search = (props) => {
+
+    const {handleSearchChange, term} = props;
+
     return (
-        <input/>
+        <input value={term} onChange={(e) => {
+            handleSearchChange(e.target.value)
+        }} />
     );
 };
 
